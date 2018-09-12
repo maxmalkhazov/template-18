@@ -1,0 +1,8 @@
+
+@function color($color-name) {
+	@return map-get($colors, $color-name);
+}
+
+@function padding($padding-size) {
+	@return map-get($paddings, $padding-size);
+}

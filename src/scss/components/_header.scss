@@ -1,0 +1,10 @@
+
+.header {
+	&__title {
+		color: color(white);
+		text-decoration: none;
+		display: block;
+		text-transform: uppercase;
+		padding: padding(small);
+	}
+}

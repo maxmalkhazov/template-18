@@ -1,0 +1,95 @@
+.main {
+	
+	@include desktop {
+		display: grid;
+		grid-template-columns: 50% auto;
+		grid-template-areas: "primary card";
+	}
+	
+	&__card {
+		background: color(white);
+		padding: padding(medium);
+		margin: 1em auto;
+		border-radius: 15px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+		width: 80%;
+		
+		@include desktop {
+			grid-area: card;
+			height: fit-content;
+			align-self: center;
+			margin: 1em;
+		}
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			margin-bottom: 10px;
+			
+			span {
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				background-color: color(primary-light);
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+			
+			strong {
+				display: inline-block;
+				margin-left: max(40px);
+			}
+		}
+	}
+	
+	&__primary {
+		color: color(white);
+		padding: padding(small);
+		text-align: center;
+		
+		@include desktop {
+			grid-area: primary;
+			text-align: left;
+			margin: 4em 0 0 4em;
+		}
+		
+		&__title {
+			font-size: 3em;
+			margin-top: 10px;
+			text-transform: uppercase;
+			font-weight: 300;
+			
+			@include desktop {
+				width: 30%;
+				font-size: 4em;
+				line-height: 1.2em;
+			}
+		}
+		
+		&__text {
+			font-size: 1.4em;
+			padding: 15px;
+		}
+		
+		&__button {
+			color: color(primary-dark);
+			border-radius: 15px;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+			text-align: center;
+			background-color: color(accent);
+			margin: 50px auto 0 auto;
+			padding: 15px;
+			
+			@include desktop {
+				display: inline-block;
+				padding: padding(small) * 2;
+			}
+		}
+	}
+}

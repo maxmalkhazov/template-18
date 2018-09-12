@@ -1,0 +1,7 @@
+// @import '../base/variables.scss';
+
+@mixin desktop {
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}
